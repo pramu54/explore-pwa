@@ -11,7 +11,8 @@ const withPWA = withPWAInit({
     register : true,
     workboxOptions: {
         disableDevLogs: true,
-    }
+    },
+    sw: "sw.js"
 })
 
 const nextConfig = {};
