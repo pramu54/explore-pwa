@@ -8,6 +8,7 @@ const withPWA = withPWAInit({
     reloadOnOnline : true,
     swcMinify : true,
     disable : false,
+    register : true,
     workboxOptions: {
         disableDevLogs: true,
     }
