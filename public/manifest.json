@@ -7,7 +7,7 @@
     "name": "explore-pwa",
     "short_name": "exp-pwa",
     "description": "Project Explorasi PWA untuk Next JS",
-    "prefer_related_applications": "false",
+    "prefer_related_applications": false,
     "id": "/",
     "icons": [
         {
