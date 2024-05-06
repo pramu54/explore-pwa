@@ -37,12 +37,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       {/* MASIH SALAH */}
-      <PwaDetector>
+      
         <body className={inter.className}>
-          {children}
-          <InstallPrompt />
+          <PwaDetector>
+            {children}
+          </PwaDetector>
         </body>
-      </PwaDetector>
+      
     </html>
   );
 }
