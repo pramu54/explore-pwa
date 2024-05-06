@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import PwaDetector from "@/utils/PwaDetector";
-import InstallPrompt from "@/components/installPrompt/InstallPrompt";
 
 const inter = Inter({ subsets: ["latin"] });
 

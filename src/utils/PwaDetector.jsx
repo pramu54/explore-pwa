@@ -28,7 +28,8 @@ const PwaDetector = ({children}) => {
     return (
         <>
             {children}
-            {deferredPrompt && <InstallPrompt />}
+            {console.log("Deffered Prompt: ", deferredPrompt)}
+            {deferredPrompt && <InstallPrompt deferredPrompt={deferredPrompt} />}
         </>
     );
 }

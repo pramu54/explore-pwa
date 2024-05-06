@@ -1,30 +1,35 @@
 "use client"
 
-const InstallPrompt = () => {
+const InstallPrompt = ({deferredPrompt}) => {
 
-const isIos = () => {
-    const userAgent = window.navigator.userAgent.toLowerCase()
-    return /iphone|ipad|ipod/.test(userAgent)
-}
+    console.log("YEAAAAAAA")
 
-const promptAppInstall = async () => {
-    if (isIos()) {
-      // write pop-up message for IOS here.
+    const isIos = () => {
+        const userAgent = window.navigator.userAgent.toLowerCase()
+        return /iphone|ipad|ipod/.test(userAgent)
     }
-    if (!isIos()) {
-        if (deferredPrompt) {
-            deferredPrompt.prompt()
-            await deferredPrompt.userChoice
-            setDeferredPrompt(null)
-        } else {
-            // Do something when app is already installed
-            alert("You have already installed app!")
+
+    const promptAppInstall = async () => {
+        if (isIos()) {
+        // write pop-up message for IOS here.
+        }
+        if (!isIos()) {
+            if (deferredPrompt) {
+                deferredPrompt.prompt()
+                await deferredPrompt.userChoice
+                setDeferredPrompt(null)
+            } else {
+                // Do something when app is already installed
+                alert("You have already installed app!")
+            }
         }
     }
-}
 
     return(
-        <button onClick={promptAppInstall}>Add to Home Screen</button>
+        <>
+            {console.log("def: ", deferredPrompt)}
+            <button onClick={promptAppInstall}>Add to Home Screen</button>
+        </>
     )
 }
 
